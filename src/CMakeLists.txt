@@ -27,15 +27,15 @@ target_sources(madronalib PUBLIC
 		${CMAKE_CURRENT_SOURCE_DIR}/source/DSP/MLDSPUtils.h
 )
 target_include_directories(madronalib INTERFACE
-	$<INSTALL_INTERFACE:madronalib>
-	$<INSTALL_INTERFACE:madronalib/app>
-	$<INSTALL_INTERFACE:madronalib/DSP>
+	$<INSTALL_INTERFACE:include/madronalib>
+	$<INSTALL_INTERFACE:include/madronalib/app>
+	$<INSTALL_INTERFACE:include/madronalib/DSP>
 )
 install(
 	TARGETS madronalib
 	EXPORT madronalib
 	FILE_SET HEADERS
-	DESTINATION madronalib
+	DESTINATION include/madronalib
 )
 install(EXPORT madronalib
     FILE madronalibConfig.cmake
